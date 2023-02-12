@@ -9,7 +9,7 @@ debugVersionCode = "1"
 debugVersionName = "1.0.0"
 ## App
 gradle = "7.4.1"
-kotlin = "1.8.0"
+kotlin = "1.8.10"
 ## Desugar
 desugar = "1.1.5"
 ## Kotlin
@@ -42,7 +42,7 @@ glide = "4.13.2"
 coil = "2.1.0"
 ## DI
 hilt = "2.42"
-koin = "3.3.2"
+koin = "3.3.3"
 ## Logs
 timber = "5.0.1"
 ## Test

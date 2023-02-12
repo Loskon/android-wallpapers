@@ -1,24 +1,23 @@
 @file:Suppress("DSL_SCOPE_VIOLATION", "UnstableApiUsage")
 
 plugins {
-    alias(deps.plugins.androidApplication)
+    alias(deps.plugins.androidLibrary)
     alias(deps.plugins.kotlin)
+    alias(deps.plugins.kapt)
 }
 
 android {
-    namespace = "com.loskon.wallpapers"
+    namespace = "com.loskon.network"
     compileSdk = deps.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.loskon.wallpapers"
-
         minSdk = deps.versions.minSdk.get().toInt()
-        targetSdk = deps.versions.targetSdk.get().toInt()
 
-        versionCode = deps.versions.debugVersionCode.get().toInt()
-        versionName = deps.versions.debugVersionName.get()
+        buildConfigField("String", "BASE_URL", "\"https://pixabay.com/api/\"")
+        buildConfigField("String", "API_KEY", "\"33106230-b104905cd7ff74ed17e2229af\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -42,14 +41,12 @@ android {
 }
 
 dependencies {
-    // Module
-    implementation(projects.network)
     // Kotlin
     implementation(deps.core)
-    // Android
-    implementation(deps.appcompat)
-    implementation(deps.material)
-    implementation(deps.constraintlayout)
+    // Network
+    implementation(deps.bundles.retrofitMoshi)
+    implementation(deps.moshi)
+    kapt(deps.moshiCodegen)
     // DI
     implementation(deps.koin)
     // Logs

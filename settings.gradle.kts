@@ -26,3 +26,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Wallpapers"
 include(":app")
+include(":network")
