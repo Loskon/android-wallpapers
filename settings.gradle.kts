@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-enableFeaturePreview("VERSION_CATALOGS")
 
 pluginManagement {
     repositories {
@@ -27,3 +26,5 @@ dependencyResolutionManagement {
 rootProject.name = "Wallpapers"
 include(":app")
 include(":network")
+include(":base")
+include(":features")

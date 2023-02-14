@@ -8,9 +8,11 @@ import retrofit2.http.Query
 
 interface PixabayApi {
 
-    @GET
+    @GET(".")
     suspend fun getWallpapers(
         @Query("key") apiKey: String = BuildConfig.API_KEY,
-        @Query("image_type") fromDate: String = "photo",
+        @Query("image_type") imageType: String = "photo",
+        @Query("orientation") orientation: String = "vertical",
+        @Query("category") category: String = "fashion"
     ): Response<ImagesDto>
 }

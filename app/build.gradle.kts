@@ -3,6 +3,7 @@
 plugins {
     alias(deps.plugins.androidApplication)
     alias(deps.plugins.kotlin)
+    alias(deps.plugins.navigation)
 }
 
 android {
@@ -44,12 +45,15 @@ android {
 dependencies {
     // Module
     implementation(projects.network)
+    implementation(projects.features)
+    implementation(projects.base)
     // Kotlin
     implementation(deps.core)
     // Android
     implementation(deps.appcompat)
     implementation(deps.material)
     implementation(deps.constraintlayout)
+    implementation(deps.bundles.navigation)
     // DI
     implementation(deps.koin)
     // Logs

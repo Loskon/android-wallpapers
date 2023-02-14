@@ -7,8 +7,8 @@ class NetworkDataSource(
     private val pixabayApi: PixabayApi
 ) {
 
-    suspend fun getWallpapers(): List<WallpaperDto> {
-        val response = pixabayApi.getWallpapers()
+    suspend fun getWallpapers(category: String): List<WallpaperDto> {
+        val response = pixabayApi.getWallpapers(category = category)
 
         return if (response.isSuccessful) {
             response.body()?.hits ?: emptyList()

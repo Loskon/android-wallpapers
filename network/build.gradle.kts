@@ -17,7 +17,6 @@ android {
         buildConfigField("String", "API_KEY", "\"33106230-b104905cd7ff74ed17e2229af\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
