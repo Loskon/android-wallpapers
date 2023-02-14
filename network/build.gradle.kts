@@ -46,6 +46,9 @@ dependencies {
     implementation(deps.bundles.retrofitMoshi)
     implementation(deps.moshi)
     kapt(deps.moshiCodegen)
+    // ImageLoader
+    implementation(deps.glide)
+    kapt(deps.glideCompiler)
     // DI
     implementation(deps.koin)
     // Logs

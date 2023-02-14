@@ -50,11 +50,10 @@ dependencies {
     implementation(deps.appcompat)
     implementation(deps.material)
     implementation(deps.constraintlayout)
+    implementation(deps.swiperefreshlayout)
     implementation(deps.bundles.navigation)
     // DI
     implementation(deps.koin)
-    // ImageLoader
-    implementation(deps.coil)
     // Logs
     implementation(deps.timber)
     // Test

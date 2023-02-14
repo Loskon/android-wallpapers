@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
+import com.google.android.material.snackbar.Snackbar
 import com.loskon.base.extension.coroutines.observe
 import com.loskon.base.extension.fragment.fragment.requireDrawable
 import com.loskon.base.viewbinding.viewBinding
@@ -64,5 +65,14 @@ class CategoryListFragment : Fragment(R.layout.fragmnet_category_list) {
         categoryListAdapter.setOnItemClickListener {
             findNavController().navigate(CategoryListFragmentDirections.openWallpaperListFragment(it.title))
         }
+        binding.bottomBarCategoryList.setNavigationOnClickListener {
+            showMessageSnackbar()
+        }
+    }
+
+    private fun showMessageSnackbar() {
+        Snackbar.make(binding.root, getString(R.string.select_category), Snackbar.LENGTH_LONG)
+            .setAnchorView(binding.bottomBarCategoryList)
+            .show()
     }
 }

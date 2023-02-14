@@ -3,6 +3,7 @@
 plugins {
     alias(deps.plugins.androidApplication)
     alias(deps.plugins.kotlin)
+    alias(deps.plugins.kapt)
     alias(deps.plugins.navigation)
 }
 

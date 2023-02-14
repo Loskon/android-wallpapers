@@ -13,7 +13,7 @@
         android:background="@android:color/transparent"
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_match_list"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_category_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         tools:listitem="@layout/item_category_list" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_bar_match_list"
+        android:id="@+id/bottom_bar_category_list"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_bar_height"
         android:layout_gravity="bottom"

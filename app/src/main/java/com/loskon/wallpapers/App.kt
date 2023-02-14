@@ -2,6 +2,7 @@ package com.loskon.wallpapers
 
 import android.app.Application
 import com.loskon.features.categorylist.categoryListModule
+import com.loskon.features.wallpaper.wallpaperModule
 import com.loskon.features.wallpaperlist.wallpaperListModule
 import com.loskon.network.networkModule
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +20,7 @@ class App : Application() {
     private fun initializeKoin(application: Application) {
         startKoin {
             androidContext(application)
-            modules(listOf(networkModule, categoryListModule, wallpaperListModule))
+            modules(listOf(networkModule, categoryListModule, wallpaperListModule, wallpaperModule))
         }
     }
 }
