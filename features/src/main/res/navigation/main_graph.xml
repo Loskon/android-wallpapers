@@ -21,7 +21,11 @@
         android:label="CategoryListFragment">
         <action
             android:id="@+id/openWallpaperListFragment"
-            app:destination="@id/wallpaperListFragment" />
+            app:destination="@id/wallpaperListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -33,7 +37,11 @@
             app:argType="string" />
         <action
             android:id="@+id/openWallpaperFragment"
-            app:destination="@id/wallpaperFragment" />
+            app:destination="@id/wallpaperFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment

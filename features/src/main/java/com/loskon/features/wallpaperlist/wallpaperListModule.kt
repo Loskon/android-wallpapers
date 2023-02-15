@@ -10,5 +10,5 @@ import org.koin.dsl.module
 val wallpaperListModule = module {
     single<WallpaperListRepository> { WallpaperListRepositoryImpl(get()) }
     factory { WallpaperListInteractor(get()) }
-    viewModel { WallpaperListViewModel(get()) }
+    viewModel { WallpaperListViewModel(get(), get()) }
 }

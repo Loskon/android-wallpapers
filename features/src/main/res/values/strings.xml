@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="select_category">Экран с выбором категорий</string>
-    <string name="error_loading">Произошла ошибка при загрузке</string>
+    <string name="welcome">Добро пожаловать в приложение для установки обоев ;)</string>
+    <string name="error_loading">Произошла ошибка при загрузке!</string>
+    <string name="no_internet">Отсутствует интернет-соединение!</string>
+    <string name="set_wallpaper">Установить</string>
+    <string name="success">Обои установлены!</string>
+    <string name="failure">Ошибка! Невозможно установить обои!</string>
 </resources>

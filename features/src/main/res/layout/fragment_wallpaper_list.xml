@@ -10,7 +10,7 @@
         android:id="@+id/sw_wallpaper_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_match_list"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_wallpaper_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_match_list"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar_wallpaper_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:trackColor="@android:color/transparent"
         app:trackThickness="2dp" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_bar_match_list"
+        android:id="@+id/bottom_bar_wallpaper_list"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_bar_height"
         android:layout_gravity="bottom"

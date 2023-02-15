@@ -6,4 +6,5 @@ sealed class WallpaperListState {
     data class Success(val wallpapers: List<WallpaperModel>) : WallpaperListState()
     object Loading : WallpaperListState()
     object Failure : WallpaperListState()
+    object NoInternet : WallpaperListState()
 }

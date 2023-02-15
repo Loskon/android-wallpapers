@@ -71,7 +71,7 @@ class CategoryListFragment : Fragment(R.layout.fragmnet_category_list) {
     }
 
     private fun showMessageSnackbar() {
-        Snackbar.make(binding.root, getString(R.string.select_category), Snackbar.LENGTH_LONG)
+        Snackbar.make(binding.root, getString(R.string.welcome), Snackbar.LENGTH_LONG)
             .setAnchorView(binding.bottomBarCategoryList)
             .show()
     }

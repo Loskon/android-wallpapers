@@ -25,7 +25,9 @@ class WallpaperListFragment : Fragment(R.layout.fragment_wallpaper_list) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (savedInstanceState == null) { viewModel.getWallpaperList(args.category) }
+        if (savedInstanceState == null) {
+            viewModel.getWallpaperList(args.category)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,15 +59,19 @@ class WallpaperListFragment : Fragment(R.layout.fragment_wallpaper_list) {
                 }
                 is WallpaperListState.Failure -> {
                     binding.indicatorWallpaperList.isVisible = false
-                    showWarningSnackbar()
+                    showMessageSnackbar(getString(R.string.error_loading))
+                }
+                is WallpaperListState.NoInternet -> {
+                    binding.indicatorWallpaperList.isVisible = false
+                    showMessageSnackbar(getString(R.string.no_internet))
                 }
             }
         }
     }
 
-    private fun showWarningSnackbar() {
-        Snackbar.make(binding.root, getString(R.string.error_loading), Snackbar.LENGTH_LONG)
-            .setAnchorView(binding.bottomBarMatchList)
+    private fun showMessageSnackbar(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
+            .setAnchorView(binding.bottomBarWallpaperList)
             .show()
     }
 
@@ -77,7 +83,7 @@ class WallpaperListFragment : Fragment(R.layout.fragment_wallpaper_list) {
         wallpaperListAdapter.setOnItemClickListener {
             findNavController().navigate(WallpaperListFragmentDirections.openWallpaperFragment(it.webformatURL))
         }
-        binding.bottomBarMatchList.setNavigationOnClickListener {
+        binding.bottomBarWallpaperList.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
     }
